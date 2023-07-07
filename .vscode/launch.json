@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-StarterApplication<starter>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "net.mcfarb.spring.starter.StarterApplication",
+            "projectName": "starter",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
