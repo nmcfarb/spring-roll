@@ -2,11 +2,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-StarterApplication<starter>",
+            "name": "Spring Boot-SpringRollApplication<spring-roll>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "net.mcfarb.spring.starter.StarterApplication",
-            "projectName": "starter",
+            "mainClass": "net.mcfarb.springroll.SpringRollApplication",
+            "projectName": "spring-roll",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
