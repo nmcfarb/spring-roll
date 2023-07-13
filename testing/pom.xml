@@ -5,13 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.mcfarb</groupId>
-    <artifactId>spring-roll</artifactId>
+    <artifactId>testing</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>testing</module>
-        <module>application</module>
+        <!-- <module>ddmock</module> -->
     </modules>
 
 </project>

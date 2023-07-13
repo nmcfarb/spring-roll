@@ -1,0 +1,44 @@
+server:
+  port: 8100
+spring:
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: taco
+    hikari:
+      connection-test-query: select 1
+      connection-timeout: 10000
+      initialization-fail-timeout: -1
+      maximum-pool-size: 10
+      max-lifetime: 1800000 # Default (30 minutes)
+      minimum-idle: 0
+      idle-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8090/auth/realms/oauth2-sample/protocol/openid-connect/certs
+app:
+  auth:
+    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenExpirationMsec: 864000000
+logging:
+  level:
+    root: INFO
+    org[.]springframework[.]web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+#    org.springframework.boot.autoconfigure: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
