@@ -23,7 +23,7 @@ import net.mcfarb.testing.ddmock.sample.SampleService;
 import net.mcfarb.testing.ddmock.service.JsonProcessor;
 import net.mcfarb.testing.ddmock.service.MockProvider;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -40,7 +40,7 @@ public class MockBuilderTest extends TestParent {
 
     MockProvider<MockBuilderTest, Object> mockProvider = new MockProvider<>();
 
-    @BeforeAll
+    @BeforeEach
     public void setup() throws ParseException {
         objectMapper.setPropertyNamingStrategy(PropertyNamingStrategies.LOWER_CAMEL_CASE)
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).setDateFormat(dateFormat);
